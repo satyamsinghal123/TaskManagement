@@ -11,6 +11,10 @@ let taskroute = require("./routes/taskRoute")
 
 app.use(express.json())
 
+app.get("/",(req,res)=>{
+  res.send("backend is working")
+})
+
 app.use("/api/auth" , authroute)
 app.use("/api/tasks" , taskroute)
 
